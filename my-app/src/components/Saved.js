@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-function Mycart(props) {
+function Saved(props) {
     const selectedIsbns = useSelector((state)=>state.checkedOutBooks);
 
     return (
@@ -15,4 +15,4 @@ function Mycart(props) {
     );
 }
 
-export default Mycart;
+export default Saved;
