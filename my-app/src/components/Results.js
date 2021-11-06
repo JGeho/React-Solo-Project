@@ -3,7 +3,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import {useDispatch} from 'react-redux';
 
-function BookList(props) {
+function Results(props) {
     const [bookData,setBookData] = useState([]);
     const dispatch = useDispatch();
 
@@ -58,4 +58,4 @@ function BookList(props) {
     );
 }
 
-export default BookList;
+export default Results;

@@ -16,7 +16,7 @@
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
-import reducer from "./reducers/bookreducer";
+import reducer from "./reducers/appreducer";
 import {Provider} from 'react-redux'
 import { createStore } from "redux";
 import App from './App';
