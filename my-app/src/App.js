@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from './components/Search';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import './App.css';
@@ -11,8 +12,9 @@ function App(props) {
     <div className="App">
       <Router>
         <Navbar/>
+        <Search/>
         <Switch>
-          <Route path="/home">
+          <Route exact path="/">
             <Home/>
           </Route>
         </Switch>
