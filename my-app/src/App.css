@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background: url(./components/beerpic.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .App-logo {
@@ -7,12 +12,20 @@
   pointer-events: none;
 }
 
+html {
+  background: url(./components/beerpic.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .navbar {
   height: 10%;
   width: 100vw;
   display: flex;
   flex-direction: row;
-  background-color: lightgreen;
+  background-color: rgba(211, 211, 211, 0.623);
   padding: 20px;
   top: 0;
   left: 0;
@@ -21,13 +34,40 @@
 }
 
 .table {
-  background-color: lightskyblue;
+  margin: 30px;
+  background-color: rgba(211, 211, 211, 0.623);
+  border-radius: 20px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.aboutme {
+  padding: 20px;
+}
+
+.mypic {
+  float: left;
+  height: auto;
+  width: 200px;
+  margin-right: 40px;
+  border-radius: 20px;
+}
+
+.aboutbio {
+  font-size: 35px;
+  color: #202020;
+}
+
+.linkinfo {
+  list-style-type: none;
+  display: flex;
+  padding: 30px;
+  justify-content: space-evenly;
+}
+
+.icons {
+  width: 100px;
+  height: 100px;
+  color: darkblue;
 }
 
 .App-header {

@@ -5,24 +5,27 @@ import Results from './Results';
 
 function Home(props) {
     const [beerData,setBeerData] = useState([]);
-    const fetchBreweries = () =>{
+    const [errorMessage, setErrorMessage] = useState(false);
+    const [address, setAddress] = useState("");
+    const fetchBreweries = (e) =>{
+        e.preventDefault()
         const address = document.getElementById('address').value;
         axios.get(`https://api.openbrewerydb.org/breweries?by_postal=${address}`)
-        //return axios.get("https://api.openbrewerydb.org/breweries?by_postal="+address)
         .then(breweries=>{
-            console.log(breweries.data)
+            if (breweries.data.length === 0){
+               setErrorMessage(true); 
+            }
             setBeerData(breweries.data)});
     }
 
     return (
-        <div>
-            <h2>Welcome to the Brewery Search Site!!!</h2>
-           
+        <div className="container">
                 <h3>Search Craft Beer Breweries Near You!!</h3>
-                <input type="text" name="address" id="address" placeholder="Zip Code"></input>
-                <input onClick={fetchBreweries} type="button" value="Submit"></input>
-          
-            <Results beerData={beerData}/>
+                <form onSubmit={fetchBreweries}>
+                <input required maxLength ="5" minLength="5" onChange={(e)=> setAddress(e.target.value)} type="text" name="address" id="address" placeholder="Zip Code"></input>
+                <button type="submit">Search</button>
+                </form>
+            {!errorMessage ? <Results beerData={beerData}/> : <h2>Error with Zip {address}</h2>}
         </div>
     );
 }

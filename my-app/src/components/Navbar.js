@@ -4,8 +4,8 @@ function Navbar(props) {
     return (
         <div className="navbar">
             <Link to="/" style={{fontSize: 30}}>Home</Link>
-            <Link to="/results" style={{fontSize: 30}}>Search Courses</Link>
-            <Link to="/saved" style={{fontSize: 30}}>Saved Courses</Link>
+            <h2>Welcome to the Brewery Search Site!!!</h2>
+            <Link to="/Aboutme" style={{fontSize: 30}}>About Me</Link>
         </div>
     );
 }

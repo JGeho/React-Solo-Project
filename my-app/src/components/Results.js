@@ -24,8 +24,8 @@ function Results(props) {
                                 <td>{data?.city}</td>
                                 <td>{data?.state}</td>
                                 <td>{data?.postal_code}</td>
-                                <td>{data?.phone}</td>
-                                <td>{data?.website_url}</td>
+                                <td><a href={data?.phone}>{data?.phone}</a></td>
+                                <td><a href={data?.website_url} target="_blank" rel="noreferrer">{data?.website_url}</a></td> 
                             </tr>
                         ))                     
                     }
