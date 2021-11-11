@@ -26,7 +26,7 @@ html {
   display: flex;
   flex-direction: row;
   background-color: rgba(211, 211, 211, 0.623);
-  padding: 20px;
+  padding: 150px;
   top: 0;
   left: 0;
   position: fixed;
@@ -53,8 +53,10 @@ html {
 }
 
 .aboutbio {
-  font-size: 35px;
+  font-size: 30px;
+  border-radius: 20px;
   color: #202020;
+  background-color: rgba(211, 211, 211, 0.623);
 }
 
 .linkinfo {
@@ -65,8 +67,8 @@ html {
 }
 
 .icons {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   color: darkblue;
 }
 

@@ -25,7 +25,7 @@ function Home(props) {
                 <input required maxLength ="5" minLength="5" onChange={(e)=> setAddress(e.target.value)} type="text" name="address" id="address" placeholder="Zip Code"></input>
                 <button type="submit">Search</button>
                 </form>
-            {!errorMessage ? <Results beerData={beerData}/> : <h2>Error with Zip {address}</h2>}
+            {!errorMessage ? <Results beerData={beerData}/> : <h2>Sorry! No Breweries in your Zip Code {address}</h2>}
         </div>
     );
 }
